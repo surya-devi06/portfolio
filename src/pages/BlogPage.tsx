@@ -41,11 +41,9 @@ const BlogPage: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative min-h-screen w-screen bg-cover bg-fixed bg-center select-none"
-      style={{ backgroundImage: "url('/bg-book.jpg')" }}
+      className="relative min-h-screen w-screen bg-[#F0F9FF] select-none"
     >
-      {/* Soft translucent wash over background */}
-      <div className="min-h-screen w-full bg-[#FCF6F4]/90 pb-20 relative text-black">
+      <div className="min-h-screen w-full bg-[#F0F9FF] pb-24 relative text-[#0F172A]">
         <LogoComponent theme="light" />
         <PowerButton />
         <SoundBar theme="light" />
@@ -57,15 +55,15 @@ const BlogPage: React.FC = () => {
           text="FEATURES"
           top="5rem"
           left="5rem"
-          color="rgba(0, 0, 0, 0.08)"
+          color="rgba(56, 189, 248, 0.12)"
         />
 
         {/* Header / Intro */}
         <div className="pt-28 md:pt-36 px-6 max-w-4xl mx-auto text-center relative z-20">
-          <h1 className="font-karla font-extrabold text-3xl md:text-5xl mb-3 tracking-tight">
+          <h1 className="font-karla font-extrabold text-3xl md:text-5xl mb-3 tracking-tight text-[#0F172A]">
             Features & Highlights
           </h1>
-          <p className="font-source text-neutral-700 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="font-source text-[#475569] text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Practical developments, competitive problem solving milestones, hackathon builds, and digital content creation activity.
           </p>
         </div>
@@ -80,37 +78,37 @@ const BlogPage: React.FC = () => {
           >
             {featsData.map((feat) => {
               const cardContent = (
-                <div className="h-full border-2 border-black p-6 rounded-sm bg-[#FCF6F4]/60 backdrop-blur-sm flex flex-col justify-between transition-all duration-300 hover:bg-black hover:text-[#FCF6F4] group shadow-lg cursor-pointer">
+                <div className="h-full border-2 border-[#BAE6FD] p-6 rounded-xl bg-white/95 backdrop-blur-sm flex flex-col justify-between transition-all duration-300 hover:border-[#38BDF8] hover:shadow-[0_12px_35px_rgba(56,189,248,0.2)] group shadow-[0_8px_25px_rgba(56,189,248,0.08)] cursor-pointer">
                   <div>
-                    <div className="flex items-center justify-between text-xs font-mono mb-2 opacity-70">
-                      <span className="uppercase tracking-wider font-semibold">
+                    <div className="flex items-center justify-between text-xs font-mono mb-2">
+                      <span className="uppercase tracking-wider font-bold text-[#0284C7] bg-[#E0F2FE] px-2.5 py-0.5 rounded-full border border-[#BAE6FD]">
                         {feat.category}
                       </span>
-                      <span>{feat.date}</span>
+                      <span className="text-[#64748B]">{feat.date}</span>
                     </div>
 
-                    <h2 className="font-karla font-bold text-xl mb-3 group-hover:text-white leading-snug">
+                    <h2 className="font-karla font-bold text-xl mb-3 text-[#0F172A] group-hover:text-[#0284C7] transition-colors leading-snug">
                       {feat.name}
                     </h2>
 
-                    <p className="text-sm font-source opacity-85 leading-relaxed mb-4">
+                    <p className="text-sm font-source text-[#475569] leading-relaxed mb-4">
                       {feat.summary}
                     </p>
                   </div>
 
                   <div>
-                    <div className="flex flex-wrap gap-2 border-t border-black/20 group-hover:border-white/20 pt-3">
+                    <div className="flex flex-wrap gap-2 border-t border-[#BAE6FD] pt-3">
                       {feat.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs font-mono px-2 py-0.5 rounded bg-black/5 group-hover:bg-white/10"
+                          className="text-xs font-mono px-2 py-0.5 rounded bg-[#F0F9FF] text-[#0284C7] border border-[#BAE6FD] font-medium"
                         >
                           #{tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="mt-3 text-xs font-mono font-bold flex items-center justify-end group-hover:underline">
+                    <div className="mt-3 text-xs font-mono font-bold flex items-center justify-end text-[#0284C7] group-hover:text-[#38BDF8] transition-colors">
                       View details ➜
                     </div>
                   </div>

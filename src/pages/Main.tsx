@@ -38,8 +38,8 @@ const Main: React.FC = () => {
       y: 0,
       transition: { type: "spring", duration: 1.5, delay: 0.8 }
     },
-    whileHover: { scale: 1.1 },
-    whileTap: { scale: 0.9 }
+    whileHover: { scale: 1.08 },
+    whileTap: { scale: 0.95 }
   };
 
   const bottomSpringEntrance = {
@@ -48,8 +48,8 @@ const Main: React.FC = () => {
       y: 0,
       transition: { type: "spring", duration: 1.5, delay: 0.8 }
     },
-    whileHover: { scale: 1.1 },
-    whileTap: { scale: 0.9 }
+    whileHover: { scale: 1.08 },
+    whileTap: { scale: 0.95 }
   };
 
   return (
@@ -58,11 +58,11 @@ const Main: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative w-screen h-screen overflow-hidden bg-[#FCF6F4] text-black select-none font-karla"
+      className="relative w-screen h-screen overflow-hidden bg-[#FFFFFF] text-[#0F172A] select-none font-karla"
     >
-      {/* Expanding Dark Division from the center */}
+      {/* Expanding Sky Blue Division from the center */}
       <div
-        className={`absolute top-0 bottom-0 z-10 bg-black transition-all duration-700 ease-in-out ${
+        className={`absolute top-0 bottom-0 z-10 bg-gradient-to-br from-[#0284C7] to-[#0369A1] transition-all duration-700 ease-in-out shadow-2xl ${
           isMobile
             ? click
               ? "h-1/2 w-full right-0"
@@ -94,7 +94,7 @@ const Main: React.FC = () => {
               : "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           }`}
         >
-          <div className="animate-[spin_2s_linear_infinite] drop-shadow-md">
+          <div className="animate-[spin_2s_linear_infinite] drop-shadow-[0_4px_12px_rgba(56,189,248,0.35)] text-[#0284C7] hover:text-[#38BDF8] transition-colors">
             <YinYang
               width={isMobile ? (click ? 60 : 120) : (click ? 80 : 180)}
               height={isMobile ? (click ? 60 : 120) : (click ? 80 : 180)}
@@ -102,27 +102,21 @@ const Main: React.FC = () => {
             />
           </div>
           {!click && (
-            <span className="font-karla font-semibold text-sm md:text-base mt-3 tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
+            <span className="font-karla font-bold text-sm md:text-base mt-3 tracking-widest uppercase text-[#0284C7] bg-[#E0F2FE] px-3 py-1 rounded-full border border-[#BAE6FD] hover:bg-[#38BDF8] hover:text-white transition-all shadow-sm">
               click here
             </span>
           )}
         </button>
 
-        {/* Say Hi / Contact link (Top Right) */}
+        {/* Say Hi / Contact CTA (Top Right) */}
         <div className="absolute top-8 right-6 md:right-12 z-20">
-          <NavLink
-            to="/contact"
-            style={{
-              color: click && !isMobile ? "#000000" : "#000000"
-            }}
-            className="block focus:outline-none"
-          >
-            <motion.h3
+          <NavLink to="/contact" className="block focus:outline-none">
+            <motion.div
               {...springEntrance}
-              className="text-lg md:text-xl font-medium tracking-wide"
+              className="px-4 py-1.5 rounded-full bg-[#38BDF8] text-[#FFFFFF] hover:bg-[#0284C7] transition-all shadow-md font-semibold text-sm md:text-base tracking-wide flex items-center gap-1.5"
             >
               Say hi..
-            </motion.h3>
+            </motion.div>
           </NavLink>
         </div>
 
@@ -130,14 +124,11 @@ const Main: React.FC = () => {
         <div className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 rotate-90 z-20 origin-center">
           <NavLink
             to="/feats"
-            style={{
-              color: "#000000"
-            }}
-            className="block focus:outline-none"
+            className="block focus:outline-none text-[#0F172A] hover:text-[#0284C7] transition-colors"
           >
             <motion.h2
               {...springEntrance}
-              className="text-lg md:text-2xl font-medium tracking-wider"
+              className="text-lg md:text-2xl font-bold tracking-wider"
             >
               Feats
             </motion.h2>
@@ -156,13 +147,13 @@ const Main: React.FC = () => {
             type="button"
             onClick={openResume}
             style={{
-              color: click && !isMobile ? "#FCF6F4" : "#000000"
+              color: click && !isMobile ? "#FFFFFF" : "#0F172A"
             }}
-            className="cursor-pointer focus:outline-none bg-transparent border-none text-left"
+            className="cursor-pointer focus:outline-none bg-transparent border-none text-left hover:text-[#38BDF8] transition-colors"
           >
             <motion.h2
               {...springEntrance}
-              className="text-lg md:text-2xl font-medium tracking-wider flex items-center gap-1.5"
+              className="text-lg md:text-2xl font-bold tracking-wider flex items-center gap-1.5"
             >
               Resume
             </motion.h2>
@@ -180,13 +171,13 @@ const Main: React.FC = () => {
           <NavLink
             to="/work"
             style={{
-              color: click && !isMobile ? "#FCF6F4" : "#000000"
+              color: click && !isMobile ? "#FFFFFF" : "#0F172A"
             }}
-            className="block focus:outline-none"
+            className="block focus:outline-none hover:text-[#38BDF8] transition-colors"
           >
             <motion.h2
               {...springEntrance}
-              className="text-lg md:text-2xl font-medium tracking-wider"
+              className="text-lg md:text-2xl font-bold tracking-wider"
             >
               Projects
             </motion.h2>
@@ -198,13 +189,13 @@ const Main: React.FC = () => {
           <NavLink
             to="/about"
             style={{
-              color: click && !isMobile ? "#FCF6F4" : "#000000"
+              color: click && !isMobile ? "#FFFFFF" : "#0F172A"
             }}
-            className="focus:outline-none"
+            className="focus:outline-none hover:text-[#38BDF8] transition-colors"
           >
             <motion.h2
               {...bottomSpringEntrance}
-              className="text-lg md:text-2xl font-medium tracking-wider"
+              className="text-lg md:text-2xl font-bold tracking-wider"
             >
               About
             </motion.h2>
@@ -212,14 +203,11 @@ const Main: React.FC = () => {
 
           <NavLink
             to="/experience"
-            style={{
-              color: click && !isMobile ? "#000000" : "#000000"
-            }}
-            className="focus:outline-none"
+            className="focus:outline-none text-[#0F172A] hover:text-[#0284C7] transition-colors"
           >
             <motion.h2
               {...bottomSpringEntrance}
-              className="text-lg md:text-2xl font-medium tracking-wider"
+              className="text-lg md:text-2xl font-bold tracking-wider"
             >
               Experience
             </motion.h2>
@@ -227,14 +215,11 @@ const Main: React.FC = () => {
 
           <NavLink
             to="/skills"
-            style={{
-              color: "#000000"
-            }}
-            className="focus:outline-none"
+            className="focus:outline-none text-[#0F172A] hover:text-[#0284C7] transition-colors"
           >
             <motion.h2
               {...bottomSpringEntrance}
-              className="text-lg md:text-2xl font-medium tracking-wider"
+              className="text-lg md:text-2xl font-bold tracking-wider"
             >
               My Skills
             </motion.h2>

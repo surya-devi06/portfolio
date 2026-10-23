@@ -11,28 +11,28 @@ const Card: React.FC<CardProps> = ({ data }) => {
 
   return (
     <div className="mr-16 md:mr-28 flex-shrink-0 group">
-      <div className="flip-card w-[15rem] md:w-[17rem] h-[50vh] md:h-[48vh] select-none">
+      <div className="flip-card w-[15rem] md:w-[17.5rem] h-[50vh] md:h-[48vh] select-none">
         <div className="flip-card-inner relative w-full h-full text-center transition-transform duration-700">
           {/* Flip Card Front */}
           <div className="flip-card-front absolute inset-0 w-full h-full">
-            <div className="w-full h-full bg-[#FCF6F4] text-black p-6 rounded-[0_50px_0_50px] border border-black flex flex-col justify-between shadow-2xl">
+            <div className="w-full h-full bg-[#FFFFFF] text-[#0F172A] p-6 rounded-[0_50px_0_50px] border-2 border-[#BAE6FD] flex flex-col justify-between shadow-[0_8px_25px_rgba(56,189,248,0.12)] transition-all duration-300 group-hover:border-[#38BDF8] group-hover:shadow-[0_12px_30px_rgba(56,189,248,0.22)]">
               <div>
-                <span className="text-xs font-mono tracking-widest uppercase opacity-60 block mb-2">
+                <span className="text-[11px] font-mono tracking-widest uppercase text-[#0284C7] font-semibold block mb-2 px-2.5 py-0.5 bg-[#E0F2FE] rounded-full w-max">
                   Featured Build
                 </span>
-                <h2 className="text-xl md:text-2xl font-karla font-bold text-left leading-tight">
+                <h2 className="text-xl md:text-2xl font-karla font-bold text-left leading-tight text-[#0F172A]">
                   {name}
                 </h2>
               </div>
 
-              <div className="text-left font-karla text-sm text-neutral-800 leading-relaxed font-normal overflow-hidden line-clamp-6">
+              <div className="text-left font-karla text-sm text-[#475569] leading-relaxed font-normal overflow-hidden line-clamp-6">
                 {description}
               </div>
 
-              <div className="text-left border-t border-black/20 pt-3">
-                <span className="text-xs font-mono font-medium text-black/60 flex items-center justify-between">
+              <div className="text-left border-t border-[#BAE6FD] pt-3">
+                <span className="text-xs font-mono font-medium text-[#0284C7] flex items-center justify-between">
                   <span>Hover to flip ➜</span>
-                  <span className="px-2 py-0.5 text-[10px] uppercase tracking-wider bg-black/10 rounded">
+                  <span className="px-2 py-0.5 text-[10px] uppercase tracking-wider bg-[#E0F2FE] text-[#0284C7] rounded font-semibold">
                     Details
                   </span>
                 </span>
@@ -42,16 +42,16 @@ const Card: React.FC<CardProps> = ({ data }) => {
 
           {/* Flip Card Back */}
           <div className="flip-card-back absolute inset-0 w-full h-full">
-            <div className="w-full h-full bg-black/90 text-[#FCF6F4] p-6 rounded-[0_50px_0_50px] border border-[#FCF6F4] flex flex-col justify-between backdrop-blur-md shadow-2xl">
+            <div className="w-full h-full bg-[#F0F9FF] text-[#0F172A] p-6 rounded-[0_50px_0_50px] border-2 border-[#38BDF8] flex flex-col justify-between backdrop-blur-md shadow-[0_12px_30px_rgba(56,189,248,0.2)]">
               <div className="text-left">
-                <h3 className="text-lg font-karla font-bold mb-3 border-b border-[#FCF6F4]/30 pb-2">
+                <h3 className="text-lg font-karla font-bold mb-3 border-b border-[#BAE6FD] pb-2 text-[#0F172A]">
                   {name}
                 </h3>
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {tags.map((t, idx) => (
                     <span
                       key={idx}
-                      className="text-xs font-source bg-[#FCF6F4]/15 px-2 py-0.5 rounded text-[#FCF6F4] font-medium"
+                      className="text-xs font-source bg-[#E0F2FE] text-[#0284C7] px-2.5 py-1 rounded font-semibold border border-[#BAE6FD]"
                     >
                       #{t}
                     </span>
@@ -59,13 +59,13 @@ const Card: React.FC<CardProps> = ({ data }) => {
                 </div>
               </div>
 
-              <footer className="flex items-center justify-between pt-4 border-t border-[#FCF6F4]/30">
+              <footer className="flex items-center justify-between pt-4 border-t border-[#BAE6FD]">
                 {demo ? (
                   <a
                     href={demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#FCF6F4] text-black text-sm md:text-base font-karla font-semibold py-2 px-5 rounded-[0_0_0_30px] hover:bg-white transition-all transform hover:scale-105"
+                    className="bg-[#38BDF8] text-[#FFFFFF] text-sm md:text-base font-karla font-bold py-2 px-5 rounded-[0_0_0_30px] hover:bg-[#0284C7] transition-all transform hover:scale-105 shadow-md"
                   >
                     Visit
                   </a>
@@ -79,9 +79,9 @@ const Card: React.FC<CardProps> = ({ data }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${name} GitHub repository`}
-                    className="p-1 text-[#FCF6F4] hover:text-white transition-transform hover:scale-110"
+                    className="p-1 text-[#0284C7] hover:text-[#38BDF8] transition-transform hover:scale-110"
                   >
-                    <Github width={28} height={28} fill="#FCF6F4" />
+                    <Github width={28} height={28} fill="currentColor" />
                   </a>
                 )}
               </footer>

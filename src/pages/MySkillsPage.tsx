@@ -21,7 +21,7 @@ const MySkillsPage: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative min-h-screen w-screen bg-[#FCF6F4] text-black overflow-x-hidden flex flex-col md:flex-row justify-evenly items-center py-24 md:py-0 px-6 gap-8 select-none"
+      className="relative min-h-screen w-screen bg-[#F0F9FF] text-[#0F172A] overflow-x-hidden flex flex-col md:flex-row justify-evenly items-center py-24 md:py-0 px-6 gap-8 select-none"
     >
       <LogoComponent theme="light" />
       <PowerButton />
@@ -34,29 +34,36 @@ const MySkillsPage: React.FC = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", duration: 1, delay: 0.4 }}
-        className="w-[88vw] md:w-[32vw] min-h-[58vh] border-2 border-black p-6 md:p-8 rounded-sm bg-[#FCF6F4]/40 backdrop-blur-sm z-20 font-ubuntu flex flex-col justify-between transition-all duration-300 hover:bg-black/85 hover:text-[#FCF6F4] group shadow-xl"
+        className="w-[88vw] md:w-[33vw] min-h-[58vh] border-2 border-[#BAE6FD] p-6 md:p-8 rounded-xl bg-white/95 backdrop-blur-sm z-20 font-ubuntu flex flex-col justify-between transition-all duration-300 hover:border-[#38BDF8] hover:shadow-[0_12px_35px_rgba(56,189,248,0.2)] group shadow-[0_8px_25px_rgba(56,189,248,0.08)]"
       >
         <div>
-          <h2 className="flex items-center text-xl md:text-2xl font-karla font-bold mb-4 group-hover:text-[#FCF6F4]">
-            <span className="mr-3 text-black group-hover:text-[#FCF6F4]">
+          <h2 className="flex items-center text-xl md:text-2xl font-karla font-bold mb-4 text-[#0F172A] group-hover:text-[#0284C7] transition-colors">
+            <span className="mr-3 text-[#0284C7] group-hover:text-[#38BDF8] transition-colors">
               <Develope width={36} height={36} fill="currentColor" />
             </span>
             {skillsData.software.title}
           </h2>
 
-          <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed font-sans">
+          <p className="text-sm md:text-base mb-6 text-[#475569] leading-relaxed font-sans">
             {skillsData.software.blurb}
           </p>
 
           <div className="space-y-4">
             {skillsData.software.items.map((grp) => (
               <div key={grp.label} className="text-sm">
-                <strong className="block text-xs uppercase tracking-wider font-karla font-bold opacity-80 mb-1">
+                <strong className="block text-xs uppercase tracking-wider font-karla font-bold text-[#0284C7] mb-1.5">
                   {grp.label}
                 </strong>
-                <p className="ml-2 leading-relaxed opacity-90">
-                  {grp.skills.join(", ")}
-                </p>
+                <div className="flex flex-wrap gap-1.5 ml-1">
+                  {grp.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-2.5 py-1 text-xs font-mono rounded bg-[#E0F2FE] text-[#0284C7] border border-[#BAE6FD] font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -68,29 +75,36 @@ const MySkillsPage: React.FC = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", duration: 1, delay: 0.6 }}
-        className="w-[88vw] md:w-[32vw] min-h-[58vh] border-2 border-black p-6 md:p-8 rounded-sm bg-[#FCF6F4]/40 backdrop-blur-sm z-20 font-ubuntu flex flex-col justify-between transition-all duration-300 hover:bg-black/85 hover:text-[#FCF6F4] group shadow-xl"
+        className="w-[88vw] md:w-[33vw] min-h-[58vh] border-2 border-[#BAE6FD] p-6 md:p-8 rounded-xl bg-white/95 backdrop-blur-sm z-20 font-ubuntu flex flex-col justify-between transition-all duration-300 hover:border-[#38BDF8] hover:shadow-[0_12px_35px_rgba(56,189,248,0.2)] group shadow-[0_8px_25px_rgba(56,189,248,0.08)]"
       >
         <div>
-          <h2 className="flex items-center text-xl md:text-2xl font-karla font-bold mb-4 group-hover:text-[#FCF6F4]">
-            <span className="mr-3 text-black group-hover:text-[#FCF6F4]">
+          <h2 className="flex items-center text-xl md:text-2xl font-karla font-bold mb-4 text-[#0F172A] group-hover:text-[#0284C7] transition-colors">
+            <span className="mr-3 text-[#0284C7] group-hover:text-[#38BDF8] transition-colors">
               <Design width={36} height={36} fill="currentColor" />
             </span>
             {skillsData.frontend.title}
           </h2>
 
-          <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed font-sans">
+          <p className="text-sm md:text-base mb-6 text-[#475569] leading-relaxed font-sans">
             {skillsData.frontend.blurb}
           </p>
 
           <div className="space-y-4">
             {skillsData.frontend.items.map((grp) => (
               <div key={grp.label} className="text-sm">
-                <strong className="block text-xs uppercase tracking-wider font-karla font-bold opacity-80 mb-1">
+                <strong className="block text-xs uppercase tracking-wider font-karla font-bold text-[#0284C7] mb-1.5">
                   {grp.label}
                 </strong>
-                <p className="ml-2 leading-relaxed opacity-90">
-                  {grp.skills.join(", ")}
-                </p>
+                <div className="flex flex-wrap gap-1.5 ml-1">
+                  {grp.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-2.5 py-1 text-xs font-mono rounded bg-[#E0F2FE] text-[#0284C7] border border-[#BAE6FD] font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -101,8 +115,8 @@ const MySkillsPage: React.FC = () => {
       <BigTitle
         text="Skills"
         top="78%"
-        right="22%"
-        color="rgba(0, 0, 0, 0.08)"
+        right="20%"
+        color="rgba(56, 189, 248, 0.12)"
       />
     </motion.div>
   );

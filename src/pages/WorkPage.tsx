@@ -93,12 +93,12 @@ const WorkPage: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative w-screen h-screen overflow-hidden bg-black text-[#FCF6F4] select-none"
+      className="relative w-screen h-screen overflow-hidden bg-[#F0F9FF] text-[#0F172A] select-none"
     >
-      <LogoComponent theme="dark" />
+      <LogoComponent theme="light" />
       <PowerButton />
-      <SoundBar theme="dark" />
-      <SocialIcons theme="dark" />
+      <SoundBar theme="light" />
+      <SocialIcons theme="light" />
 
       {/* Main Horizontal Drag & Scroll Container */}
       <ul
@@ -116,21 +116,21 @@ const WorkPage: React.FC = () => {
         text="WORK"
         top="10%"
         right="20%"
-        color="rgba(252, 246, 244, 0.12)"
+        color="rgba(56, 189, 248, 0.12)"
       />
       <BigTitle
         text="Swipe.."
         top="78%"
         right="2%"
-        color="rgba(252, 246, 244, 0.08)"
+        color="rgba(56, 189, 248, 0.08)"
       />
 
       {/* Rotating YinYang Indicator in Bottom Right Corner */}
       <span
         ref={yinyangRef}
-        className="fixed right-6 md:right-8 bottom-6 md:bottom-8 w-14 h-14 md:w-20 md:h-20 z-30 transition-transform duration-75 text-[#FCF6F4] pointer-events-none drop-shadow-md"
+        className="fixed right-6 md:right-8 bottom-6 md:bottom-8 w-14 h-14 md:w-20 md:h-20 z-30 transition-transform duration-75 text-[#0284C7] pointer-events-none drop-shadow-[0_4px_16px_rgba(56,189,248,0.35)]"
       >
-        <YinYang width="100%" height="100%" fill="#FCF6F4" />
+        <YinYang width="100%" height="100%" fill="currentColor" />
       </span>
     </motion.div>
   );

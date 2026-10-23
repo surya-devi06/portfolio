@@ -46,8 +46,8 @@ const SoundBar: React.FC<SoundBarProps> = ({ theme = "light" }) => {
     }
   };
 
-  const isDark = theme === "dark";
-  const barColor = isDark ? "#FCF6F4" : "#000000";
+  const isContrast = theme === "dark";
+  const barColor = isContrast ? "#FFFFFF" : "#0284C7";
 
   return (
     <button

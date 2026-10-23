@@ -38,23 +38,23 @@ const AnchorComponent: React.FC<AnchorProps> = ({ number = 20 }) => {
 
   return (
     <div className="hidden md:block relative z-40 select-none pointer-events-none" aria-hidden="true">
-      <div ref={hiddenRef} className="absolute top-4 right-8 text-black">
-        <Anchor width={65} height={65} fill="#000000" />
+      <div ref={hiddenRef} className="absolute top-4 right-8 text-[#0284C7]">
+        <Anchor width={65} height={65} fill="#0284C7" />
       </div>
       <div
         ref={ref}
-        className="fixed top-0 right-8 flex flex-col items-center justify-center -translate-y-full transition-transform duration-75 text-black"
+        className="fixed top-0 right-8 flex flex-col items-center justify-center -translate-y-full transition-transform duration-75 text-[#0284C7]"
       >
         {Array.from({ length: number }).map((_, id) => (
           <LinkIcon
             key={id}
             width={22}
             height={22}
-            fill="#000000"
-            className="rotate-[135deg] my-[1px] opacity-80"
+            fill="#0284C7"
+            className="rotate-[135deg] my-[1px] opacity-75"
           />
         ))}
-        <Anchor width={65} height={65} fill="#000000" />
+        <Anchor width={65} height={65} fill="#0284C7" />
       </div>
     </div>
   );

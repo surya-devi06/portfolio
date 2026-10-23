@@ -13,7 +13,7 @@ const BigTitle: React.FC<BigTitleProps> = ({
   top,
   left,
   right,
-  color = "rgba(0,0,0,0.1)"
+  color = "rgba(56, 189, 248, 0.12)"
 }) => {
   return (
     <span

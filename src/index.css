@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #38BDF8;
+  --color-primary-dark: #0284C7;
+  --color-primary-light: #E0F2FE;
+  --color-background: #FFFFFF;
+  --color-background-soft: #F0F9FF;
+  --color-text: #0F172A;
+  --color-text-secondary: #475569;
+  --color-border: #BAE6FD;
+}
+
 @layer base {
   *, *::before, *::after {
     box-sizing: border-box;
@@ -16,7 +27,8 @@
     font-family: 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FCF6F4;
+    background-color: #FFFFFF;
+    color: #0F172A;
   }
 
   /* Hide scrollbars globally while preserving scroll functionality */

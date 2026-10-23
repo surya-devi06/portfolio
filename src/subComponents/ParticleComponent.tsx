@@ -25,9 +25,9 @@ const ParticleComponent: React.FC<ParticleProps> = ({ theme = "light" }) => {
 
     window.addEventListener("resize", handleResize);
 
-    const isDark = theme === "dark";
-    const particleColor = isDark ? "rgba(252, 246, 244, " : "rgba(0, 0, 0, ";
-    const count = Math.min(Math.floor((width * height) / 14000), 80);
+    const isContrast = theme === "dark";
+    const particleColor = isContrast ? "rgba(255, 255, 255, " : "rgba(56, 189, 248, ";
+    const count = Math.min(Math.floor((width * height) / 15000), 70);
 
     const particles: {
       x: number;
@@ -45,7 +45,7 @@ const ParticleComponent: React.FC<ParticleProps> = ({ theme = "light" }) => {
         radius: Math.random() * 2 + 1,
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
-        alpha: Math.random() * 0.5 + 0.2
+        alpha: Math.random() * 0.4 + 0.2
       });
     }
 
@@ -78,7 +78,7 @@ const ParticleComponent: React.FC<ParticleProps> = ({ theme = "light" }) => {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `${particleColor}${0.15 * (1 - dist / 110)})`;
+            ctx.strokeStyle = `${particleColor}${0.18 * (1 - dist / 110)})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }

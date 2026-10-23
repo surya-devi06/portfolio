@@ -6,8 +6,7 @@ interface ContactFormProps {
   theme?: "dark" | "light";
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
-  const isDark = theme === "dark";
+const ContactForm: React.FC<ContactFormProps> = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +41,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
     }
     setErrors({});
 
-    // Construct legitimate mailto link to verified email
     const subject = encodeURIComponent(
       formData.subject.trim() || `Portfolio Inquiry from ${formData.name}`
     );
@@ -67,26 +65,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`w-full max-w-xl p-6 md:p-8 rounded-lg border backdrop-blur-sm transition-all duration-300 font-ubuntu ${
-        isDark
-          ? "border-[#FCF6F4]/30 bg-black/40 text-[#FCF6F4]"
-          : "border-black/30 bg-[#FCF6F4]/80 text-black"
-      }`}
+      className="w-full max-w-xl p-6 md:p-8 rounded-lg border-2 border-[#BAE6FD] bg-[#FFFFFF] text-[#0F172A] shadow-[0_8px_30px_rgba(56,189,248,0.12)] font-ubuntu"
     >
-      <h3 className="text-xl md:text-2xl font-karla font-bold mb-4">
+      <h3 className="text-xl md:text-2xl font-karla font-bold mb-4 text-[#0F172A]">
         Send a Message
       </h3>
 
       {submitted ? (
-        <div className="p-4 rounded border border-green-500/50 bg-green-500/10 text-sm">
-          <p className="font-semibold text-green-500 mb-1">
+        <div className="p-4 rounded border border-[#38BDF8] bg-[#F0F9FF] text-sm">
+          <p className="font-semibold text-[#0284C7] mb-1">
             ✓ Mail client opened!
           </p>
-          <p className="opacity-80">
-            If your mail app didn&apos;t open automatically, feel free to write directly to:{" "}
+          <p className="text-[#475569]">
+            If your mail app didn&apos;t open automatically, write directly to:{" "}
             <a
               href={`mailto:${siteConfig.email}`}
-              className="underline font-bold"
+              className="underline font-bold text-[#0284C7] hover:text-[#38BDF8]"
             >
               {siteConfig.email}
             </a>
@@ -94,7 +88,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
           <button
             type="button"
             onClick={() => setSubmitted(false)}
-            className="mt-3 text-xs underline opacity-80 hover:opacity-100"
+            className="mt-3 text-xs underline text-[#0284C7] hover:text-[#38BDF8]"
           >
             Send another note
           </button>
@@ -102,7 +96,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
       ) : (
         <div className="space-y-4">
           <div>
-            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-medium">
+            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-semibold text-[#475569]">
               Your Name *
             </label>
             <input
@@ -112,11 +106,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
                 setFormData({ ...formData, name: e.target.value })
               }
               placeholder="e.g. Alex Chen"
-              className={`w-full px-3 py-2 text-sm rounded border outline-none transition-colors ${
-                isDark
-                  ? "bg-black/60 border-[#FCF6F4]/30 focus:border-[#FCF6F4]"
-                  : "bg-white border-black/30 focus:border-black"
-              }`}
+              className="w-full px-3 py-2 text-sm rounded border border-[#BAE6FD] bg-[#F0F9FF] text-[#0F172A] outline-none transition-colors focus:border-[#0284C7] focus:bg-[#FFFFFF]"
             />
             {errors.name && (
               <p className="text-xs text-red-500 mt-1">{errors.name}</p>
@@ -124,7 +114,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
           </div>
 
           <div>
-            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-medium">
+            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-semibold text-[#475569]">
               Email Address *
             </label>
             <input
@@ -134,11 +124,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
                 setFormData({ ...formData, email: e.target.value })
               }
               placeholder="name@domain.com"
-              className={`w-full px-3 py-2 text-sm rounded border outline-none transition-colors ${
-                isDark
-                  ? "bg-black/60 border-[#FCF6F4]/30 focus:border-[#FCF6F4]"
-                  : "bg-white border-black/30 focus:border-black"
-              }`}
+              className="w-full px-3 py-2 text-sm rounded border border-[#BAE6FD] bg-[#F0F9FF] text-[#0F172A] outline-none transition-colors focus:border-[#0284C7] focus:bg-[#FFFFFF]"
             />
             {errors.email && (
               <p className="text-xs text-red-500 mt-1">{errors.email}</p>
@@ -146,7 +132,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
           </div>
 
           <div>
-            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-medium">
+            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-semibold text-[#475569]">
               Subject
             </label>
             <input
@@ -156,16 +142,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
                 setFormData({ ...formData, subject: e.target.value })
               }
               placeholder="Collaboration / Project / Question"
-              className={`w-full px-3 py-2 text-sm rounded border outline-none transition-colors ${
-                isDark
-                  ? "bg-black/60 border-[#FCF6F4]/30 focus:border-[#FCF6F4]"
-                  : "bg-white border-black/30 focus:border-black"
-              }`}
+              className="w-full px-3 py-2 text-sm rounded border border-[#BAE6FD] bg-[#F0F9FF] text-[#0F172A] outline-none transition-colors focus:border-[#0284C7] focus:bg-[#FFFFFF]"
             />
           </div>
 
           <div>
-            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-medium">
+            <label className="block text-xs uppercase tracking-wider mb-1 font-karla font-semibold text-[#475569]">
               Message *
             </label>
             <textarea
@@ -175,11 +157,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
                 setFormData({ ...formData, message: e.target.value })
               }
               placeholder="Write your note here..."
-              className={`w-full px-3 py-2 text-sm rounded border outline-none transition-colors resize-none ${
-                isDark
-                  ? "bg-black/60 border-[#FCF6F4]/30 focus:border-[#FCF6F4]"
-                  : "bg-white border-black/30 focus:border-black"
-              }`}
+              className="w-full px-3 py-2 text-sm rounded border border-[#BAE6FD] bg-[#F0F9FF] text-[#0F172A] outline-none transition-colors resize-none focus:border-[#0284C7] focus:bg-[#FFFFFF]"
             />
             {errors.message && (
               <p className="text-xs text-red-500 mt-1">{errors.message}</p>
@@ -188,11 +166,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ theme = "light" }) => {
 
           <button
             type="submit"
-            className={`w-full py-2.5 px-4 font-karla font-semibold text-sm rounded transition-all duration-200 cursor-pointer ${
-              isDark
-                ? "bg-[#FCF6F4] text-black hover:bg-white hover:scale-[1.01]"
-                : "bg-black text-[#FCF6F4] hover:bg-neutral-800 hover:scale-[1.01]"
-            }`}
+            className="w-full py-2.5 px-4 font-karla font-bold text-sm rounded bg-[#38BDF8] text-[#FFFFFF] hover:bg-[#0284C7] transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg hover:scale-[1.01]"
           >
             Send via Mail Client ✉
           </button>

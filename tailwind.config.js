@@ -8,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        themeLight: {
-          body: '#FCF6F4',
-          text: '#000000',
-        },
-        themeDark: {
-          body: '#000000',
-          text: '#FCF6F4',
-        }
+        skyPrimary: '#38BDF8',
+        skyDeep: '#0284C7',
+        skyLight: '#E0F2FE',
+        skyPale: '#F0F9FF',
+        white: '#FFFFFF',
+        textPrimary: '#0F172A',
+        textSecondary: '#475569',
+        skyBorder: '#BAE6FD',
       },
       fontFamily: {
         karla: ['"Karla"', 'sans-serif'],

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="public/portrait.png" alt="Surya Devi" width="140" style="border-radius: 50%; border: 3px solid #FCF6F4; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+  <img src="public/portrait.png" alt="Surya Devi" width="140" style="border-radius: 50%; border: 3px solid #38BDF8; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);" />
 
   <h3>Surya Devi</h3>
   <p><strong>Computer Science Engineering Student | Full Stack Developer | Java & DSA Learner | Content Creator</strong></p>
@@ -12,10 +12,10 @@
   </p>
 
   <p>
-    <a href="https://surya-devi.vercel.app/"><img src="https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
-    <a href="https://drive.google.com/file/d/1_RoPrwvdrRTfe0p3JLah5v-hOrzHRLWz/view?usp=drive_link"><img src="https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Resume" /></a>
+    <a href="https://surya-devi.vercel.app/"><img src="https://img.shields.io/badge/Live_Portfolio-0284C7?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio" /></a>
+    <a href="https://drive.google.com/file/d/1_RoPrwvdrRTfe0p3JLah5v-hOrzHRLWz/view?usp=drive_link"><img src="https://img.shields.io/badge/Resume-38BDF8?style=for-the-badge&logo=googledrive&logoColor=white" alt="Resume" /></a>
     <a href="https://www.linkedin.com/in/surya-devi007/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-    <a href="https://github.com/surya-devi06"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+    <a href="https://github.com/surya-devi06"><img src="https://img.shields.io/badge/GitHub-0F172A?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
     <a href="https://leetcode.com/u/surya-devi/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
     <a href="https://www.instagram.com/cart.bag/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   </p>
@@ -26,18 +26,35 @@
 
 ## ✦ Overview
 
-A modern, interactive, and responsive developer portfolio website designed with artistic precision and creative web engineering, inspired by the distinctive design language of [hareesh.web.app](https://hareesh.web.app).
+A modern, interactive, and responsive developer portfolio website designed with artistic precision and creative web engineering, inspired by the distinctive design language of [hareesh.web.app](https://hareesh.web.app) and styled with a clean, modern **Sky Blue + White** visual identity.
 
 It showcases real-world full-stack web applications, machine learning drug-screening pipelines, speech transcription desktop systems, algorithmic problem-solving milestones, and creative digital content presence.
 
 ---
 
+## ✦ Color Palette & Design System
+
+The application is styled with a developer-focused, high-contrast, clean **Sky Blue + White** palette:
+
+| Token | Hex Value | Usage |
+| :--- | :--- | :--- |
+| **Primary sky blue** | `#38BDF8` | Interactive accents, buttons, glowing borders, badges |
+| **Deep sky blue** | `#0284C7` | Active nav indicators, primary brand text, hover states |
+| **Light sky blue** | `#E0F2FE` | Badge containers, chip fills, soft focus rings |
+| **Pale blue background** | `#F0F9FF` | Soft sectional backgrounds, cards, and input fields |
+| **Pure white** | `#FFFFFF` | Primary viewport background, card surfaces, button text |
+| **Primary text** | `#0F172A` | High-contrast readable typography for headings & titles |
+| **Secondary text** | `#475569` | Body paragraphs, dates, subheadings, and captions |
+| **Borders** | `#BAE6FD` | Subtle, clean container outlines and dividers |
+
+---
+
 ## ✦ Key Features
 
-- **Interactive Hero Screen**: Rotating Yin-Yang center button with an expanding dual-split container (`DarkDiv`), animated entrance modals, and interactive rotated rail navigation.
-- **Glassmorphic Terminal About Page (`/about`)**: Dark-themed viewport featuring a floating astronaut graphic, canvas particle field, and italic monospace terminal bio.
+- **Interactive Hero Screen**: Rotating Yin-Yang center button with an expanding deep sky-blue dual-split container (`DarkDiv`), animated entrance modals, and interactive rotated rail navigation.
+- **Glassmorphic Terminal About Page (`/about`)**: Pale blue viewport featuring a floating astronaut graphic, sky blue canvas particle field, and italic monospace terminal bio.
 - **3D Flip Project Cards & Grab Scroll (`/work`, `/projects`)**: Smooth horizontal drag-and-swipe container with rotational Yin-Yang scroll tracker and interactive 3D flipping cards revealing tech tags, live demo buttons, and GitHub repositories.
-- **Categorized Skills System (`/skills`)**: Dual cards for Software Development and Frontend & Creative capabilities with interactive hover-inversion color states.
+- **Categorized Skills System (`/skills`)**: Dual cards for Software Development and Frontend & Creative capabilities with sky blue badges, icons, and hover effects.
 - **Milestone & Experience Timeline (`/experience`)**: Staggered cards covering full-stack internships, hackathons, education, and verified metrics (17 LMS modules, 10,000 molecules per screening run, 90+ LeetCode problems solved).
 - **Feats & Features Showcase (`/feats`, `/blog`)**: Textured canvas with an interactive descending chain and anchor component (`AnchorComponent`) tracking page scroll depth.
 - **Direct Contact & Mail Dispatch (`/contact`)**: Instant access to professional channels, accompanied by a validated client-side message form with confetti feedback.
@@ -53,7 +70,7 @@ It showcases real-world full-stack web applications, machine learning drug-scree
 | **React 18** | Component-driven UI architecture |
 | **TypeScript** | Strict type safety and maintainability |
 | **Vite 6** | Ultra-fast bundling, HMR, and build optimization |
-| **Tailwind CSS** | Utility-first styling with custom typography and color tokens |
+| **Tailwind CSS** | Utility-first styling with custom typography and Sky Blue + White color tokens |
 | **Framer Motion** | Physics-based spring animations, page transitions, and staggered lists |
 | **HTML5 Canvas** | Custom 60fps particle constellations with zero external overhead |
 
@@ -80,57 +97,6 @@ It showcases real-world full-stack web applications, machine learning drug-scree
 5. **Inflation Expense Tracker**
    - Real-time financial dashboard tracking purchasing power and expense dynamics against inflation indices.
    - [Live Demo](https://inflation-expense-tracker.vercel.app/)
-
----
-
-## ✦ Project Structure
-
-```
-portfolio/
-├── public/
-│   ├── bg-book.jpg            # Features page texture
-│   ├── favicon.svg            # Custom SVG favicon
-│   ├── portrait.png           # Hero profile image
-│   └── spaceman.png           # About page floating astronaut
-├── src/
-│   ├── components/
-│   │   ├── AllSvgs.tsx        # Handcrafted vector SVGs
-│   │   ├── Card.tsx           # 3D Flip Card component
-│   │   ├── ContactForm.tsx    # Validated contact form
-│   │   └── Intro.tsx          # Dual-theme animated hero modal
-│   ├── data/
-│   │   ├── experience.ts      # Internships, milestones & education
-│   │   ├── feats.ts           # Highlights & features
-│   │   ├── projects.ts        # Project metadata, tags & links
-│   │   ├── site.ts            # Identity, headline, bio & socials
-│   │   └── skills.ts          # Technical skill groupings
-│   ├── pages/
-│   │   ├── AboutPage.tsx      # Terminal about page
-│   │   ├── BlogPage.tsx       # Feats grid with anchor chain
-│   │   ├── ContactPage.tsx    # Contact channels & message form
-│   │   ├── ExperiencePage.tsx # Timeline & milestones
-│   │   ├── Main.tsx           # Interactive Yin-Yang hero
-│   │   ├── MySkillsPage.tsx   # Dual skill cards
-│   │   ├── NotFoundPage.tsx   # 404 handler
-│   │   └── WorkPage.tsx       # Horizontal project slider
-│   ├── subComponents/
-│   │   ├── AnchorComponent.tsx# Dynamic scroll-depth anchor
-│   │   ├── BigTitle.tsx       # Translucent watermark headings
-│   │   ├── Loading.tsx        # Suspense fallback
-│   │   ├── LogoComponent.tsx  # Brand logo
-│   │   ├── ParticleComponent.tsx # Interactive canvas particles
-│   │   ├── PowerButton.tsx    # Top-center home button
-│   │   ├── SocialIcons.tsx    # Side social column
-│   │   └── SoundBar.tsx       # Audio equalizer toggle
-│   ├── App.tsx                # Route definitions & transitions
-│   ├── index.css              # Typography, 3D flip card, and base styles
-│   └── main.tsx               # Entry point
-├── index.html                 # Semantic SEO & metadata
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-└── vite.config.ts
-```
 
 ---
 

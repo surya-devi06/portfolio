@@ -8,8 +8,9 @@ interface SocialIconsProps {
 }
 
 const SocialIcons: React.FC<SocialIconsProps> = ({ theme = "light" }) => {
-  const isDark = theme === "dark";
-  const iconColor = isDark ? "#FCF6F4" : "#000000";
+  const isContrast = theme === "dark";
+  const iconColor = isContrast ? "#FFFFFF" : "#0284C7";
+  const lineColor = isContrast ? "#FFFFFF" : "#BAE6FD";
 
   return (
     <div className="flex flex-col items-center fixed bottom-0 left-4 md:left-8 z-30 space-y-2 md:space-y-3">
@@ -24,7 +25,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ theme = "light" }) => {
           target="_blank"
           rel="me noopener noreferrer"
           aria-label="Surya Devi LinkedIn"
-          className="block transition-transform focus:outline-none"
+          className="block transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none"
         >
           <LinkedIn width={24} height={24} fill={iconColor} />
         </a>
@@ -41,7 +42,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ theme = "light" }) => {
           target="_blank"
           rel="me noopener noreferrer"
           aria-label="Surya Devi GitHub"
-          className="block transition-transform focus:outline-none"
+          className="block transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none"
         >
           <Github width={24} height={24} fill={iconColor} />
         </a>
@@ -58,7 +59,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ theme = "light" }) => {
           target="_blank"
           rel="me noopener noreferrer"
           aria-label="Surya Devi LeetCode Profile"
-          className="block transition-transform focus:outline-none"
+          className="block transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none"
         >
           <LeetCodeIcon width={24} height={24} fill={iconColor} />
         </a>
@@ -75,7 +76,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ theme = "light" }) => {
           target="_blank"
           rel="me noopener noreferrer"
           aria-label="Surya Devi Instagram Content"
-          className="block transition-transform focus:outline-none"
+          className="block transition-colors duration-200 hover:text-[#38BDF8] focus:outline-none"
         >
           <InstagramIcon width={24} height={24} fill={iconColor} />
         </a>
@@ -87,7 +88,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ theme = "light" }) => {
         transition={{ type: "spring", duration: 1, delay: 0.8 }}
         className="w-[2px] block"
         style={{
-          backgroundColor: iconColor
+          backgroundColor: lineColor
         }}
       />
     </div>
